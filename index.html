@@ -252,26 +252,18 @@
       margin-bottom: 32px;
     }
     
+    /* FOTO PRINCIPAL AQUI */
     .hero-visual {
       min-height: 640px;
       border-radius: 34px;
       overflow: hidden;
       position: relative;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.02)),
-        radial-gradient(circle at top left, rgba(203,185,159,.35), transparent 32%),
-        linear-gradient(180deg, #f4efe9 0%, #ece5dd 100%);
+      background-color: #ece5dd; /* Cor de fundo caso a foto demore a carregar */
+      background-image: url('foto-principal.jpg'); /* <- NOME DA SUA FOTO AQUI */
+      background-size: cover;
+      background-position: center;
       box-shadow: var(--shadow);
       border: 1px solid rgba(203, 185, 159, .3);
-    }
-    
-    .hero-visual::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      opacity: .12;
-      mix-blend-mode: multiply;
     }
     
     .visual-card {
@@ -280,8 +272,8 @@
       right: 26px;
       bottom: 26px;
       z-index: 2;
-      background: rgba(255, 255, 255, .82);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, .88);
+      backdrop-filter: blur(10px);
       border: 1px solid rgba(203, 185, 159, .45);
       border-radius: 24px;
       padding: 32px;
@@ -396,23 +388,18 @@
       align-items: center;
     }
     
+    /* SEGUNDA FOTO AQUI */
     .editorial-box {
       min-height: 520px;
       border-radius: 24px;
       overflow: hidden;
-      background: linear-gradient(180deg, #eae4dc, #ddd2c6);
+      background-color: #ddd2c6;
+      background-image: url('foto-sobre.jpg'); /* <- NOME DA SUA SEGUNDA FOTO AQUI */
+      background-size: cover;
+      background-position: center top;
       border: 1px solid rgba(203, 185, 159, .4);
       box-shadow: var(--shadow);
       position: relative;
-    }
-    
-    .editorial-box::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80') center top/cover no-repeat;
-      opacity: .18;
-      mix-blend-mode: multiply;
     }
     
     .editorial-copy h2 {
@@ -707,7 +694,7 @@
 
     <section id="sobre" class="section">
       <div class="container editorial">
-        <div class="editorial-box" role="img" aria-label="Imagem abstrata e elegante de fundo"></div>
+        <div class="editorial-box" role="img" aria-label="Foto da Dra. Joyce Radis"></div>
         <div class="editorial-copy">
           <h2>Olhar técnico e individualizado</h2>
           <p>A medicina, para mim, exige mais do que conduta. Exige atenção real, presença e raciocínio cuidadoso.</p>
@@ -799,4 +786,4 @@
   
 </body>
 </html>
-      
+  
