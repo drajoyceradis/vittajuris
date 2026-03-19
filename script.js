@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header');
-  const scrollThreshold = 50; 
+  const scrollThreshold = 5l; 
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > scrollThreshold) {
