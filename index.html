@@ -5,203 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dra. Joyce Radis | Medicina clínica e atuação assistencial documental</title>
   <meta name="description" content="Dra. Joyce Radis — atendimento clínico particular e atuação assistencial documental, com uma experiência elegante, clara e individualizada." />
-  <meta name="author" content="Dra. Joyce Radis" />
+  <meta name="author" content="Dra. Joyce Radis de Souza" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f6f4f1;
-      --surface: #f3f1ed;
-      --card: #fcfbf8;
-      --deep: #4a3d36;
-      --deep-2: #5a4a42;
-      --text: #262321;
-      --muted: #6e655f;
-      --line: #d7cec5;
-      --accent: #cbb99f;
-      --white: #ffffff;
-      --radius: 28px;
-      --shadow: 0 24px 60px rgba(74, 61, 54, .08);
-      --shadow-hover: 0 32px 70px rgba(74, 61, 54, .12);
-      --max: 1160px;
-      --transition: all 0.3s ease;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { text-decoration: none; color: inherit; transition: var(--transition); }
-    img { max-width: 100%; display: block; }
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
-    .header {
-      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(12px);
-      background: rgba(246, 244, 241, .86);
-      border-bottom: 1px solid rgba(215, 206, 197, .55);
-    }
-    .nav-inner {
-      min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
-    }
-    .brand { display: flex; align-items: flex-end; gap: 14px; }
-    .monogram {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 40px; line-height: 1; color: var(--deep); letter-spacing: .02em;
-    }
-    .brand-copy strong { display: block; font-size: 15px; font-weight: 600; letter-spacing: .02em; }
-    .brand-copy span { display: block; font-size: 12px; color: var(--muted); margin-top: 3px; }
-    .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
-    .nav-links a { font-size: 14px; color: var(--muted); font-weight: 500; }
-    .nav-links a:hover { color: var(--deep); }
-    h1, h2, h3, .serif {
-      font-family: "Cormorant Garamond", serif; font-weight: 400; letter-spacing: -.02em; line-height: .95;
-    }
-    h1 { font-size: clamp(3.2rem, 7vw, 5.4rem); margin-bottom: 18px; color: var(--deep); }
-    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn {
-      min-height: 52px; padding: 0 24px; border: 1px solid var(--line);
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500;
-      transition: var(--transition); background: transparent; cursor: pointer;
-    }
-    .btn:hover { background: #efeae2; border-color: var(--muted); }
-    .btn-primary { background: var(--deep); color: var(--white); border-color: var(--deep); }
-    .btn-primary:hover {
-      background: var(--deep-2); border-color: var(--deep-2); color: var(--white);
-      transform: translateY(-2px); box-shadow: 0 8px 20px rgba(74, 61, 54, 0.15);
-    }
-    .whatsapp-float {
-      position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
-      background-color: #25d366; color: #FFF; border-radius: 50px; box-shadow: var(--shadow);
-      z-index: 100; display: flex; align-items: center; justify-content: center; transition: var(--transition);
-    }
-    .whatsapp-float:hover {
-      transform: translateY(-4px) scale(1.05); box-shadow: var(--shadow-hover); background-color: #20b858;
-    }
-    .whatsapp-float svg { width: 32px; height: 32px; fill: currentColor; }
-    .hero { padding: 42px 0 48px; }
-    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 26px; align-items: stretch; }
-    .hero-copy {
-      padding: 46px 8px 46px 0; display: flex; flex-direction: column; justify-content: center;
-    }
-    .eyebrow {
-      font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
-      margin-bottom: 18px; font-weight: 600;
-    }
-    .hero-copy p { font-size: 17px; color: var(--muted); max-width: 58ch; margin-bottom: 32px; }
-    .hero-visual {
-      min-height: 640px; border-radius: 34px; overflow: hidden; position: relative;
-      background-color: #ece5dd;
-      background-image: url('./images/foto-principal.jpg');
-      background-size: cover; background-position: center;
-      box-shadow: var(--shadow); border: 1px solid rgba(203, 185, 159, .3);
-    }
-    .visual-card {
-      position: absolute; left: 26px; right: 26px; bottom: 26px; z-index: 2;
-      background: rgba(255, 255, 255, .88); backdrop-filter: blur(10px);
-      border: 1px solid rgba(203, 185, 159, .45); border-radius: 24px; padding: 32px;
-    }
-    .visual-card .serif { font-size: 42px; color: var(--deep); margin-bottom: 10px; }
-    .visual-card p { color: var(--muted); margin-bottom: 24px; }
-    .section { padding: 48px 0; }
-    .section-head {
-      display: flex; justify-content: space-between; gap: 22px; align-items: flex-end; margin-bottom: 32px;
-    }
-    .section-head h2 { font-size: 58px; color: var(--deep); }
-    .section-head p { max-width: 620px; color: var(--muted); font-size: 17px; }
-    .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .path-card {
-      background: var(--card); border: 1px solid rgba(203, 185, 159, .45);
-      border-radius: 30px; padding: 40px; box-shadow: var(--shadow);
-      transition: var(--transition); display: flex; flex-direction: column;
-    }
-    .path-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
-    .path-card .label {
-      font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
-      margin-bottom: 12px; font-weight: 600;
-    }
-    .path-card h3 { font-size: 42px; color: var(--deep); margin-bottom: 16px; }
-    .path-card p { color: var(--muted); margin-bottom: 24px; }
-    .list { display: grid; gap: 12px; margin-bottom: 32px; flex-grow: 1; }
-    .list div { position: relative; padding-left: 20px; color: var(--muted); }
-    .list div::before {
-      content: '•'; position: absolute; left: 0; top: 0; color: var(--deep); font-size: 1.2em; line-height: 1;
-    }
-    .editorial { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; }
-    .editorial-box {
-      min-height: 520px; border-radius: 24px; overflow: hidden; background-color: #ddd2c6;
-      background-image: url('./images/foto-sobre.jpg');
-      background-size: cover; background-position: center top;
-      border: 1px solid rgba(203, 185, 159, .4); box-shadow: var(--shadow); position: relative;
-    }
-    .editorial-copy h2 { font-size: 74px; color: var(--deep); margin-bottom: 24px; }
-    .editorial-copy p { font-size: 17px; color: var(--muted); margin-bottom: 20px; max-width: 62ch; }
-    .reviews-wrap {
-      background: var(--deep); color: var(--white); border-radius: 34px; padding: 64px 40px;
-    }
-    .reviews-wrap h2 { font-size: 64px; color: #e9dcc8; margin-bottom: 12px; text-align: center; }
-    .reviews-wrap .sub {
-      color: rgba(255, 255, 255, .72); text-align: center; margin-bottom: 40px; font-size: 17px;
-    }
-    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .review {
-      background: rgba(255, 255, 255, .06); border: 1px solid rgba(233, 220, 200, .14);
-      padding: 30px; border-radius: 22px; transition: var(--transition);
-    }
-    .review:hover { background: rgba(255, 255, 255, .09); transform: translateY(-4px); }
-    .stars { letter-spacing: .18em; color: #e9dcc8; font-size: 14px; margin-bottom: 16px; }
-    .review p { font-size: 15px; line-height: 1.7; color: rgba(255, 255, 255, .9); }
-    .cta-final { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: stretch; }
-    .cta-panel {
-      background: var(--card); border: 1px solid rgba(203, 185, 159, .45);
-      padding: 48px; border-radius: 30px; box-shadow: var(--shadow);
-    }
-    .cta-panel h2 { font-size: 64px; color: var(--deep); margin-bottom: 18px; }
-    .cta-panel p { color: var(--muted); max-width: 58ch; margin-bottom: 32px; font-size: 17px; }
-    .contact-stack {
-      display: flex; flex-direction: column; justify-content: center; height: 100%; gap: 14px; color: var(--muted); font-size: 16px;
-    }
-    .footer { padding: 26px 0 54px; }
-    .footer-box { background: var(--deep); color: #e9dcc8; padding: 54px 40px; border-radius: 34px; }
-    .footer-grid { display: grid; grid-template-columns: .6fr 1.4fr; gap: 32px; align-items: center; }
-    .footer-mark {
-      font-family: "Cormorant Garamond", serif; font-size: 112px; line-height: .85; text-align: center;
-    }
-    .footer-copy strong { display: block; font-size: 26px; color: #f8f3eb; margin-bottom: 10px; }
-    .footer-copy .small {
-      font-size: 13px; color: rgba(255, 255, 255, .5); margin-top: 18px; max-width: 80ch;
-    }
-    @media (max-width: 960px) {
-      .nav-links { display: none; }
-      .hero-grid, .paths, .editorial, .reviews-grid, .cta-final, .footer-grid { grid-template-columns: 1fr; }
-      .hero-copy { padding-right: 0; padding-bottom: 24px; }
-      .section-head { flex-direction: column; align-items: flex-start; }
-      .section-head h2 { margin-bottom: 12px; }
-      .editorial-copy h2, .cta-panel h2, .reviews-wrap h2 { font-size: 48px; }
-      h1 { font-size: 3.2rem; }
-      .hero-visual { min-height: 480px; }
-      .footer-mark { text-align: left; font-size: 84px; }
-      .reviews-wrap, .footer-box { border-radius: 24px; padding: 40px 24px; }
-      .path-card, .cta-panel { padding: 30px; }
-      .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
-      .whatsapp-float svg { width: 28px; height: 28px; }
-    }
-  </style>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
     <nav class="container nav-inner" aria-label="Navegação Principal">
       <a class="brand" href="#inicio" aria-label="Voltar ao início">
         <span class="monogram">JR</span>
-        <span class="brand-copy"><strong>Dra. Joyce Radis</strong><span>Medicina clínica e atuação assistencial documental</span></span>
+        <span class="brand-copy"><strong>Dra. Joyce Radis de Souza</strong><span>Medicina clínica e atuação em assistência pericial</span></span>
       </a>
       <div class="nav-links">
         <a href="#pacientes">Pacientes</a>
-        <a href="#assistencial">Atuação assistencial</a>
+        <a href="#assistencial">Advogados </a>
         <a href="#sobre">Sobre</a>
         <a href="#avaliacoes">Avaliações</a>
         <a href="#contato">Contato</a>
@@ -213,18 +32,17 @@
     <section id="inicio" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Cuidado clínico e atuação documental com presença, clareza e individualização</div>
-          <h1>Cuidado atento e atuação individualizada</h1>
-          <p>Atendimento médico com escuta, clareza e organização técnica. Para pacientes, um caminho simples de consulta e acompanhamento. Para demandas assistenciais documentais, uma atuação médica objetiva, criteriosa e bem estruturada.</p>
+          <div class="eyebrow">Médica com atuação clínica e pericial voltada a emissão de pareceres éticos, claros baseados em evidência científica</div>
+          <h1>Descubra um cuidado individualizado</h1>
           <div class="cta-row">
             <a class="btn btn-primary" href="#pacientes">Sou paciente</a>
-            <a class="btn" href="#assistencial">Atuação assistencial</a>
+            <a class="btn" href="#advogado">Sou advogado</a>
           </div>
         </div>
         <div class="hero-visual">
           <div class="visual-card">
-            <div class="serif">Olhar técnico e individualizado</div>
-            <p>Consulta, acompanhamento e análise assistencial documental em uma experiência clara, elegante e bem direcionada.</p>
+            <div class="serif">Olhar individualizado</div>
+            <p>Médica assistencial e pericial, voltada a análise Documental e Emissão de Pareceres éticos e claros.</p>
             <a class="btn" href="#sobre">Conheça minha atuação</a>
           </div>
         </div>
@@ -235,7 +53,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Pacientes</h2>
-          <p>Um espaço pensado para quem busca consulta médica particular com escuta atenta, condução individualizada e acompanhamento com clareza.</p>
+          <p>Um atendimento pensado para quem busca um acompanhamento médico com escuta atenta, condução individualizada e rastreio de Fatores de Risco</p>
         </div>
         <div class="paths">
           <article class="path-card">
@@ -249,17 +67,16 @@
             </div>
             <div class="cta-row">
               <a class="btn btn-primary" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta no Calendly">Agendar consulta</a>
-              <a class="btn" href="https://wa.me/5527998134032" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Dra. Joyce Radis pelo WhatsApp">WhatsApp</a>
             </div>
           </article>
-          <article id="assistencial" class="path-card">
-            <div class="label">Atuação assistencial documental</div>
+          <article class="path-card">
+            <div class="label">Atuação assistencial pericial</div>
             <h3>Atuação médico-documental com precisão técnica</h3>
-            <p>Análise médica de documentação clínica, elaboração de pareceres e estruturação assistencial de casos com linguagem precisa, coerência técnica e responsabilidade documental.</p>
+            <p>Análise médica de documentos, elaboração de pareceres e estruturação assistencial de casos com linguagem precisa, coerência técnica e estratégia documental, de forma ética.</p>
             <div class="list">
               <div>Leitura criteriosa da documentação médica</div>
               <div>Organização assistencial documental de casos</div>
-              <div>Solicitação estruturada por formulário próprio</div>
+              <div>Solicitação de parecer técnico</div>
             </div>
             <div class="cta-row">
               <a class="btn btn-primary" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer" aria-label="Solicitar análise no Typeform">Solicitar análise</a>
@@ -275,12 +92,8 @@
         <div class="editorial-box" role="img" aria-label="Foto da Dra. Joyce Radis"></div>
         <div class="editorial-copy">
           <h2>Olhar técnico e individualizado</h2>
-          <p>A medicina, para mim, exige mais do que conduta. Exige atenção real, presença e raciocínio cuidadoso.</p>
-          <p>Na consulta, isso se traduz em escuta, clareza e acompanhamento. Na atuação assistencial documental, se traduz em análise criteriosa, coerência clínica e responsabilidade sobre cada detalhe apresentado.</p>
-          <p>Médica formada pelo Centro Universitário do Espírito Santo, com experiência em atendimento clínico em diferentes níveis de atenção, acompanhamento de pacientes crônicos, urgência e atuação médico-documental em contextos assistenciais.</p>
-          <div class="cta-row" style="margin-top: 24px;">
-            <a class="btn" href="#contato">Entrar em contato</a>
-          </div>
+          <p>A medicina, para a Dra Joyce Radis, exige mais do que conduta. Exige atenção real, presença e raciocínio cuidadoso.</p>
+          <p>Na consulta, isso se traduz em escuta, clareza e acompanhamento. Já na atuação jurídica, o resultado é uma análise criteriosa, coerência clínica e ética.</p>
         </div>
       </div>
     </section>
@@ -288,7 +101,7 @@
     <section id="avaliacoes" class="section">
       <div class="container reviews-wrap">
         <h2>Experiências de quem já foi atendido</h2>
-        <div class="sub">Avaliações que refletem a experiência em consulta.</div>
+        <div class="sub">Experiências em consulta com a Dra Joyce:.</div>
         <div class="reviews-grid">
           <article class="review">
             <div class="stars" aria-hidden="true">★★★★★</div>
@@ -296,7 +109,7 @@
           </article>
           <article class="review">
             <div class="stars" aria-hidden="true">★★★★★</div>
-            <p>“Foi a melhor clínica geral que encontramos para acompanhar meus pais.”</p>
+            <p>“Foi a melhor médica que encontramos para acompanhar meus pais.”</p>
           </article>
           <article class="review">
             <div class="stars" aria-hidden="true">★★★★★</div>
@@ -304,7 +117,7 @@
           </article>
           <article class="review">
             <div class="stars" aria-hidden="true">★★★★★</div>
-            <p>“Uma das melhores consultas que já tive. Fui muito bem cuidado.”</p>
+            <p>“Uma das melhores consultas que já tive!! Fui muito bem cuidada.”</p>
           </article>
           <article class="review">
             <div class="stars" aria-hidden="true">★★★★★</div>
@@ -317,20 +130,20 @@
     <section id="contato" class="section">
       <div class="container cta-final">
         <div class="cta-panel">
-          <h2>Agende sua consulta ou entre em contato</h2>
-          <p>Se você busca atendimento clínico particular ou deseja entender melhor a atuação assistencial documental, os canais abaixo organizam cada fluxo de forma simples.</p>
+          <h2>Entre em contato</h2>
+          <p>Se você busca atendimento personalizado ou deseja entender melhor a atuação assistencial documental, entre em contato com a nossa equipe.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">Agendar consulta</a>
-            <a class="btn" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Área assistencial</a>
+            <a class="btn btn-primary" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">Agende sua Consulta</a>
+            <a class="btn" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Área Jurídica</a>
           </div>
         </div>
         <div class="cta-panel">
           <div class="contact-stack">
-            <strong style="color:var(--deep); font-size: 22px; font-weight: 600;">Dra. Joyce Radis</strong>
+            <strong style="color:var(--deep); font-size: 22px; font-weight: 600;">Dra. Joyce Radis de Souza</strong>
             <span><strong>CRM-ES:</strong> 21188</span>
-            <span><strong>WhatsApp profissional:</strong> <a href="https://wa.me/5527998134032" target="_blank" rel="noopener noreferrer">(27) 99813-4032</a></span>
+            <span><strong>WhatsApp:</strong> <a href="https://wa.me/5527998134032" target="_blank" rel="noopener noreferrer">(27) 99813-4032</a></span>
             <span><strong>Agendamento:</strong> <a href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">calendly.com/drajoyceradis</a></span>
-            <span><strong>Solicitação assistencial:</strong> <a href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Via Typeform</a></span>
+            <span><strong>Solicitação de parecer técnico jurídico:</strong> <a href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Preencha seu Formulário Dr.</a></span>
           </div>
         </div>
       </div>
@@ -343,10 +156,10 @@
         <div class="footer-mark">JR</div>
         <div class="footer-copy">
           <strong>Dra. Joyce Radis</strong>
-          <div>Medicina clínica e atuação assistencial documental</div>
-          <div style="margin-top:16px">WhatsApp profissional: (27) 99813-4032</div>
-          <div>Agendamento: <a href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">calendly.com/drajoyceradis</a></div>
-          <div class="small">A área assistencial documental descreve atuação médico-técnica voltada à análise clínica e documental de casos específicos. A área de pacientes corresponde ao atendimento médico particular.</div>
+          <div>Medicina clínica e atuação técnica assistencial documental voltada à escritórios de advocacia</div>
+          <div style="margin-top:16px">WhatsApp: (27) 99813-4032</div>
+          <div>Agendamento Médico: <a href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">calendly.com/drajoyceradis</a></div>
+          <div class="small">A área assistencial documental descreve atuação exclusiva para escritórios de advocacia. A área de pacientes corresponde ao atendimento médico particular.</div>
         </div>
       </div>
     </div>
@@ -357,6 +170,6 @@
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
+  <script src="script.js"></script>
 </body>
-</html>
-  
+  </html>
