@@ -694,7 +694,7 @@ p {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   h1 {
     font-size: var(--font-size-h2);
   }
