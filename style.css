@@ -356,4 +356,16 @@
   .footer-mark{
     font-size: 72px;
   }
+  .path-card p,
+  .path-card .list div {
+    color: #6e655f;
+  }
+
+  .path-card .list div {
+    font-weight: 400;
+  }
+
+  .path-card .list div::before {
+    color: #b7a99a;
 }
+
