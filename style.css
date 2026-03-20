@@ -408,19 +408,19 @@ p {
 .footer-copy strong {
   display: block; /* Adicionado */
   font-size: 26px; /* Atualizado */
-  color: #f8f3eb; /* Atualizado */
+  color: var(white--); /* Atualizado */
   margin-bottom: 10px; /* Atualizado */
 }
 
 .footer-copy div {
-  margin-bottom: var(--spacing-xs); /* Mantido */
-  font-size: var(--font-size-sm); /* Mantido */
+  margin-bottom: var(--white); /* Mantido */
+  font-size: var(--white); /* Mantido */
   color: inherit; /* Pode ser alterado para uma cor específica do footer, se necessário */
 }
 
 .footer-copy .small {
   font-size: 13px; /* Atualizado */
-  color: var (--accent);(255, 255, 255, .5); /* Atualizado */
+  color: var (--white );(255, 255, 255, .5); /* Atualizado */
   margin-top: 18px; /* Atualizado */
   max-width: 80ch; /* Atualizado */
 }
