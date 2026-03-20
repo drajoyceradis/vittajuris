@@ -1,0 +1,45 @@
+.hero-visual {
+  min-height: 580px;
+  background-image: url("https://www.dropbox.com/scl/fi/b91pp99sdgr9b8smq9qzr/B88A9435.jpg?rlkey=5yhy0arjriug3bxynervgewrg&st=kvftb8qr&raw=1");
+  background-size: cover;
+  background-position: center 18%;
+  background-repeat: no-repeat;
+}
+
+.editorial-box {
+  background-image: url("https://www.dropbox.com/scl/fi/krx55jkozqmo7mtlxqfpz/2LT01102.jpg?rlkey=uvwru5hvugjjzf3glwj3d1pzk&st=be3b4jnt&raw=1");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.footer-copy strong {
+  color: #f8f3eb !important;
+}
+
+.footer-copy div {
+  margin-bottom: 4px !important;
+  font-size: 14px !important;
+}
+
+.footer-copy .small {
+  color: rgba(255, 255, 255, .72) !important;
+}
+
+.contact-name {
+  color: var(--deep);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.list div {
+  position: relative;
+  padding-left: 18px;
+}
+
+@media (max-width: 960px) {
+  .hero-visual {
+    min-height: 460px;
+    background-position: center 20%;
+  }
+}
