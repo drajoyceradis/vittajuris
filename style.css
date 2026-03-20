@@ -420,7 +420,7 @@ p {
 
 .footer-copy .small {
   font-size: 13px; /* Atualizado */
-  color: rgba(255, 255, 255, .5); /* Atualizado */
+  color: var (--accent);(255, 255, 255, .5); /* Atualizado */
   margin-top: 18px; /* Atualizado */
   max-width: 80ch; /* Atualizado */
 }
