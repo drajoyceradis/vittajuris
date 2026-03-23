@@ -11,8 +11,143 @@ body.home-page .home-note strong {
   color: var(--deep);
 }
 
-.inner-page .header {
-  position: sticky;
+.home-portal .nav-links {
+  gap: 18px;
+}
+
+.home-portal .nav-links a {
+  font-size: 13px;
+}
+
+.minimal-home-hero {
+  padding: 70px 0 56px;
+}
+
+.home-minimal-shell {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.home-minimal-copy {
+  max-width: 700px;
+}
+
+.home-minimal-copy h1 {
+  max-width: 9ch;
+  margin-bottom: 18px;
+}
+
+.home-minimal-copy .eyebrow {
+  margin-bottom: 22px;
+}
+
+.home-main-cta {
+  margin-top: 28px;
+}
+
+.home-signature-panel {
+  padding: 34px;
+  border-radius: 32px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .80), rgba(248, 239, 230, .66));
+  border: 1px solid rgba(184, 162, 143, .30);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.signature-line {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  line-height: 1.04;
+  color: var(--deep);
+}
+
+.signature-divider {
+  height: 1px;
+  margin: 22px 0;
+  background: linear-gradient(90deg, rgba(67, 53, 47, .18), rgba(67, 53, 47, .04));
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+}
+
+.signature-grid span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.minimal-portal-section {
+  padding-top: 4px;
+}
+
+.refined-portal-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.refined-portal-card {
+  display: block;
+  padding: 34px;
+  border-radius: 32px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .82), rgba(248, 240, 232, .68));
+  border: 1px solid rgba(184, 162, 143, .30);
+  box-shadow: var(--shadow);
+  transition: transform .55s cubic-bezier(.22, 1, .36, 1), box-shadow .55s cubic-bezier(.22, 1, .36, 1), border-color .4s ease;
+}
+
+.refined-portal-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(154, 127, 103, .42);
+}
+
+.portal-kicker {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .62);
+  border: 1px solid rgba(184, 162, 143, .28);
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.refined-portal-card h2 {
+  font-size: 44px;
+  margin-bottom: 12px;
+  color: var(--deep);
+}
+
+.refined-portal-card p {
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 34ch;
+}
+
+.portal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+  color: var(--deep);
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.portal-link::after {
+  content: '↗';
+  font-size: 14px;
 }
 
 .page-hero {
@@ -348,7 +483,9 @@ body.home-page .home-note strong {
 }
 
 @media (max-width: 960px) {
+  .home-minimal-shell,
   .page-hero-grid,
+  .refined-portal-grid,
   .grid-3,
   .grid-2,
   .steps-grid,
@@ -359,6 +496,10 @@ body.home-page .home-note strong {
     grid-template-columns: 1fr;
   }
 
+  .home-minimal-copy h1 {
+    max-width: none;
+  }
+
   .page-panel,
   .side-panel,
   .contact-card,
@@ -366,10 +507,13 @@ body.home-page .home-note strong {
   .info-card,
   .step-card,
   .highlight-card,
-  .thankyou-card {
+  .thankyou-card,
+  .home-signature-panel,
+  .refined-portal-card {
     padding: 30px;
   }
 
+  .refined-portal-card h2,
   .section-title-wrap h2,
   .page-title {
     font-size: 44px;
@@ -382,6 +526,35 @@ body.home-page .home-note strong {
 }
 
 @media (max-width: 640px) {
+  .home-portal .nav-links {
+    display: none;
+  }
+
+  .minimal-home-hero {
+    padding: 56px 0 40px;
+  }
+
+  .home-main-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-main-cta .btn {
+    width: 100%;
+  }
+
+  .signature-line,
+  .refined-portal-card h2,
+  .section-title-wrap h2,
+  .page-title,
+  .thankyou-card h1 {
+    font-size: 36px;
+  }
+
+  .signature-grid {
+    grid-template-columns: 1fr;
+  }
+
   .page-panel,
   .side-panel,
   .contact-card,
@@ -389,15 +562,11 @@ body.home-page .home-note strong {
   .info-card,
   .step-card,
   .highlight-card,
-  .thankyou-card {
+  .thankyou-card,
+  .home-signature-panel,
+  .refined-portal-card {
     padding: 24px;
     border-radius: 26px;
-  }
-
-  .section-title-wrap h2,
-  .page-title,
-  .thankyou-card h1 {
-    font-size: 36px;
   }
 
   .side-panel .serif,

@@ -9,102 +9,68 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link href="fixes.css" rel="stylesheet">
-  <link href="pages.css" rel="stylesheet">
+  <link href="style.css?v=portal3" rel="stylesheet">
+  <link href="fixes.css?v=portal3" rel="stylesheet">
+  <link href="pages.css?v=portal3" rel="stylesheet">
 </head>
 <body class="home-portal">
   <header class="header">
     <nav class="container nav-inner" aria-label="Navegação Principal">
-      <a class="brand" href="index.html" aria-label="Voltar ao início">
+      <a class="brand" href="/" aria-label="Voltar ao início">
         <span class="monogram">JR</span>
         <span class="brand-copy"><strong>Dra Joyce Radis de Souza</strong><span>Medicina clínica e atuação em assistência pericial</span></span>
       </a>
       <div class="nav-links">
-        <a href="pacientes.html">Pacientes</a>
-        <a href="advogados.html">Advogados</a>
-        <a href="#manifesto">Manifesto</a>
-        <a href="#contato">Contato</a>
+        <a href="/pacientes.html">Pacientes</a>
+        <a href="/advogados.html">Advogados</a>
+        <a href="https://wa.me/5527998134032" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section id="inicio" class="hero home-hero">
-      <div class="container home-hero-grid">
-        <div class="home-hero-copy">
-          <div class="eyebrow">Medicina clínica e atuação técnico-documental em ambientes distintos, com linguagem própria para cada público</div>
-          <h1>Dois caminhos. A mesma assinatura clínica.</h1>
-          <p class="home-lead">Uma presença institucional desenhada para separar com elegância o atendimento particular ao paciente da atuação técnica voltada ao setor jurídico.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="pacientes.html">Sou paciente</a>
-            <a class="btn" href="advogados.html">Sou advogado(a)</a>
+    <section class="hero home-hero minimal-home-hero">
+      <div class="container home-minimal-shell">
+        <div class="home-minimal-copy">
+          <div class="eyebrow">Medicina clínica particular e atuação técnico-documental em ambientes distintos</div>
+          <h1>Escolha sua área.</h1>
+          <p class="home-lead">Uma entrada institucional limpa, pensada para levar cada público ao espaço correto, sem excesso de texto e sem misturar paciente com setor jurídico.</p>
+          <div class="cta-row home-main-cta">
+            <a class="btn btn-primary" href="/pacientes.html">Sou paciente</a>
+            <a class="btn" href="/advogados.html">Sou advogado(a)</a>
           </div>
-          <div class="hero-microcopy">CRM ES 21188 • Consulta médica particular e análise técnico-documental em páginas próprias</div>
+          <div class="hero-microcopy">CRM ES 21188</div>
         </div>
-        <div class="home-hero-visual" role="img" aria-label="Retrato da Dra Joyce Radis">
-          <div class="home-visual-chip">Consulta particular com escuta e condução individualizada</div>
-          <div class="home-visual-chip bottom">Área jurídica separada, com apresentação técnica e institucional</div>
-        </div>
+        <aside class="home-signature-panel">
+          <div class="mini-kicker">Assinatura profissional</div>
+          <div class="signature-line">Clareza clínica, linguagem precisa e presença elegante.</div>
+          <div class="signature-divider"></div>
+          <div class="signature-grid">
+            <span>Consulta médica particular</span>
+            <span>Análise técnico-documental</span>
+            <span>Fluxos separados</span>
+            <span>Contato direto</span>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section home-portal-section">
+    <section class="section home-portal-section minimal-portal-section">
       <div class="container">
-        <div class="section-head home-section-head">
-          <h2>Escolha a área correta</h2>
-          <p>A home agora funciona como portal. Ela posiciona, orienta e direciona. O aprofundamento fica nas páginas exclusivas de pacientes e advogados.</p>
-        </div>
-        <div class="portal-grid">
-          <a class="portal-card" href="pacientes.html">
+        <div class="portal-grid refined-portal-grid">
+          <a class="portal-card refined-portal-card" href="/pacientes.html">
             <div class="portal-kicker">Pacientes</div>
-            <h3>Consulta médica particular</h3>
-            <p>Ambiente pensado para quem busca atendimento clínico com clareza, escuta qualificada e comunicação mais humana.</p>
+            <h2>Consulta médica particular</h2>
+            <p>Área pensada para atendimento clínico, agendamento e primeiro contato com linguagem mais humana e direta.</p>
             <span class="portal-link">Entrar na área do paciente</span>
           </a>
-          <a class="portal-card" href="advogados.html">
+          <a class="portal-card refined-portal-card" href="/advogados.html">
             <div class="portal-kicker">Advogados</div>
-            <h3>Atuação técnica e documental</h3>
-            <p>Página institucional voltada ao setor jurídico, com apresentação mais sóbria, fluxo mais claro e posicionamento técnico.</p>
+            <h2>Atuação técnica e documental</h2>
+            <p>Página institucional voltada ao setor jurídico, com triagem, apresentação técnica e fluxo próprio.</p>
             <span class="portal-link">Entrar na área jurídica</span>
           </a>
         </div>
-      </div>
-    </section>
-
-    <section id="manifesto" class="section home-manifesto">
-      <div class="container">
-        <div class="manifesto-card">
-          <div class="manifesto-mark">JR</div>
-          <div class="manifesto-copy">
-            <div class="mini-kicker">Assinatura profissional</div>
-            <h2>Clareza clínica, linguagem precisa e presença elegante.</h2>
-            <p>O site não precisa dizer tudo na abertura. Ele precisa transmitir direção, autoridade e refinamento. Por isso, a home foi reduzida ao essencial: posicionamento, escolha de área e acesso organizado a cada frente de atuação.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" class="section home-contact">
-      <div class="container contact-grid">
-        <article class="contact-card">
-          <div class="mini-kicker">Contato para pacientes</div>
-          <h3 class="page-title">Agendamento e primeiro contato</h3>
-          <p>Para consulta médica particular, utilize a área do paciente ou o link de agendamento direto.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="pacientes.html">Área do paciente</a>
-            <a class="btn" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">Agendar</a>
-          </div>
-        </article>
-        <article class="contact-card">
-          <div class="mini-kicker">Contato para advogados</div>
-          <h3 class="page-title">Triagem técnica e apresentação institucional</h3>
-          <p>Para atuação médico-documental e análise técnica, utilize a área jurídica ou o formulário estruturado.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="advogados.html">Área jurídica</a>
-            <a class="btn" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Abrir formulário</a>
-          </div>
-        </article>
       </div>
     </section>
   </main>
@@ -118,8 +84,8 @@
           <div>CRM ES 21188</div>
           <p>Medicina clínica e atuação técnico-documental com áreas separadas para pacientes e setor jurídico.</p>
           <div class="caminhos-bifurcacao" style="margin-top: 20px; display:flex; gap:20px; flex-wrap:wrap;">
-            <a href="pacientes.html">Área do Paciente</a>
-            <a href="advogados.html">Área Jurídica</a>
+            <a href="/pacientes.html">Área do Paciente</a>
+            <a href="/advogados.html">Área Jurídica</a>
           </div>
           <div class="contato-footer" style="margin-top: 15px;">
             <h3 class="footer-title">Contato</h3>
@@ -142,6 +108,5 @@
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
-  <script src="script.js"></script>
 </body>
 </html>
