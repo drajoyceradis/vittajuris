@@ -1,0 +1,305 @@
+body.home-page .home-note {
+  margin: 0 0 28px;
+  padding: 18px 22px;
+  border: 1px solid rgba(203, 185, 159, .45);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .72);
+  color: var(--muted);
+  box-shadow: var(--shadow);
+}
+
+body.home-page .home-note strong {
+  color: var(--deep);
+}
+
+.inner-page .header {
+  position: sticky;
+}
+
+.page-hero {
+  padding: 44px 0 28px;
+}
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.page-panel,
+.side-panel,
+.info-card,
+.step-card,
+.highlight-card,
+.contact-card,
+.page-footer-card {
+  background: var(--card);
+  border: 1px solid rgba(203, 185, 159, .45);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+
+.page-panel,
+.side-panel,
+.contact-card,
+.page-footer-card {
+  padding: 38px;
+}
+
+.page-kicker,
+.mini-kicker {
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.page-panel h1,
+.page-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 18px;
+}
+
+.page-panel p,
+.side-panel p,
+.contact-card p,
+.step-card p,
+.info-card p,
+.highlight-card p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.page-lead {
+  max-width: 64ch;
+  margin-bottom: 28px;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.side-panel .serif {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.page-section {
+  padding: 18px 0 46px;
+}
+
+.grid-3,
+.grid-2,
+.steps-grid,
+.highlights-grid,
+.contact-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.grid-3,
+.highlights-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2,
+.contact-grid,
+.steps-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.info-card,
+.step-card,
+.highlight-card {
+  padding: 30px;
+}
+
+.info-card h3,
+.step-card h3,
+.highlight-card h3 {
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.info-card ul,
+.side-list,
+.feature-list,
+.simple-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.info-card li,
+.side-list li,
+.feature-list li,
+.simple-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.info-card li::before,
+.side-list li::before,
+.feature-list li::before,
+.simple-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--deep);
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--deep);
+  color: var(--white);
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.section-title-wrap {
+  margin-bottom: 28px;
+}
+
+.section-title-wrap h2 {
+  font-size: 58px;
+  margin-bottom: 12px;
+}
+
+.section-title-wrap p {
+  max-width: 68ch;
+  color: var(--muted);
+}
+
+.contact-grid .contact-card {
+  height: 100%;
+}
+
+.contact-card strong {
+  color: var(--deep);
+}
+
+.contact-card .cta-row {
+  margin-top: 24px;
+}
+
+.page-footer {
+  padding: 8px 0 54px;
+}
+
+.page-footer-card {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.page-footer-mark {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 92px;
+  line-height: .9;
+  text-align: center;
+  color: var(--deep);
+}
+
+.page-footer-copy strong {
+  display: block;
+  color: var(--deep);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.page-footer-copy p,
+.page-footer-copy div,
+.page-footer-copy a {
+  color: var(--muted);
+}
+
+.page-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.page-footer-links a {
+  color: var(--deep);
+}
+
+.page-footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+  .page-hero-grid,
+  .grid-3,
+  .grid-2,
+  .steps-grid,
+  .highlights-grid,
+  .contact-grid,
+  .page-footer-card {
+    grid-template-columns: 1fr;
+  }
+
+  .page-panel,
+  .side-panel,
+  .contact-card,
+  .page-footer-card,
+  .info-card,
+  .step-card,
+  .highlight-card {
+    padding: 28px;
+  }
+
+  .section-title-wrap h2,
+  .page-title {
+    font-size: 44px;
+  }
+
+  .page-footer-mark {
+    text-align: left;
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-panel,
+  .side-panel,
+  .contact-card,
+  .page-footer-card,
+  .info-card,
+  .step-card,
+  .highlight-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .section-title-wrap h2,
+  .page-title {
+    font-size: 36px;
+  }
+
+  .side-panel .serif,
+  .info-card h3,
+  .step-card h3,
+  .highlight-card h3 {
+    font-size: 28px;
+  }
+}
