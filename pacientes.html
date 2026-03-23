@@ -110,7 +110,7 @@
           <article class="step-card">
             <div class="step-number">01</div>
             <h3>Agendamento</h3>
-            <p>O primeiro passo é entrar em contato ou realizar o agendamento pelo link disponibilizado.</p>
+            <p>O primeiro passo é entrar em contato, preencher o formulário inicial ou realizar o agendamento pelo link disponibilizado.</p>
           </article>
           <article class="step-card">
             <div class="step-number">02</div>
@@ -125,7 +125,7 @@
           <article class="step-card">
             <div class="step-number">04</div>
             <h3>Contato facilitado</h3>
-            <p>O paciente pode utilizar os canais da página para informações de agendamento e comunicação inicial.</p>
+            <p>O paciente pode utilizar os canais da página para triagem inicial, agendamento e comunicação de primeiro contato.</p>
           </article>
         </div>
       </div>
@@ -133,14 +133,45 @@
 
     <section id="contato" class="page-section">
       <div class="container contact-grid">
-        <article class="contact-card">
-          <div class="mini-kicker">Agendamento</div>
-          <h3 class="page-title">Pronto para marcar?</h3>
-          <p>Escolha o canal que for mais confortável. A página foi desenhada para facilitar o acesso do paciente ao atendimento, sem excesso de informações paralelas.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">Agendar no Calendly</a>
-            <a class="btn" href="https://wa.me/5527998134032" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-          </div>
+        <article class="contact-card contact-form-card">
+          <div class="mini-kicker">Pré-contato</div>
+          <h3 class="page-title">Enviar solicitação</h3>
+          <p>Este formulário funciona como porta de entrada. Ele é indicado para o primeiro contato e para dúvidas iniciais sobre consulta. Não envie informações médicas sensíveis por aqui.</p>
+          <form class="contact-form" action="https://formsubmit.co/contato@drajoyceradis.com" method="POST">
+            <input type="hidden" name="_subject" value="Novo contato pelo site | Pacientes | Dra Joyce Radis">
+            <input type="hidden" name="_next" value="https://drajoyceradis.com/obrigada-paciente.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Recebemos sua solicitação inicial pelo site da Dra Joyce Radis. Em breve retornaremos pelo canal informado.">
+            <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
+            <div class="form-grid">
+              <label class="field">
+                <span>Nome</span>
+                <input type="text" name="nome" required>
+              </label>
+              <label class="field">
+                <span>E-mail</span>
+                <input type="email" name="email" required>
+              </label>
+              <label class="field">
+                <span>WhatsApp</span>
+                <input type="text" name="telefone" required>
+              </label>
+              <label class="field">
+                <span>Canal preferido</span>
+                <select name="canal_preferido" required>
+                  <option value="">Selecione</option>
+                  <option>WhatsApp</option>
+                  <option>E-mail</option>
+                </select>
+              </label>
+              <label class="field field-full">
+                <span>Como posso te ajudar?</span>
+                <textarea name="mensagem" rows="5" required></textarea>
+              </label>
+            </div>
+            <div class="form-note">Ao enviar, sua solicitação vai para o e-mail de contato do site.</div>
+            <button class="btn btn-primary" type="submit">Enviar solicitação</button>
+          </form>
         </article>
         <article class="contact-card">
           <div class="mini-kicker">Contato</div>
@@ -149,7 +180,11 @@
             <li>Consulta médica particular com agendamento prévio.</li>
             <li>WhatsApp: (27) 99813-4032</li>
             <li>Agendamento: calendly.com/drajoyceradis</li>
+            <li>Para marcação imediata, o Calendly continua disponível.</li>
           </ul>
+          <div class="cta-row">
+            <a class="btn" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">Agendar no Calendly</a>
+          </div>
         </article>
       </div>
     </section>

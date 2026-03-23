@@ -137,23 +137,53 @@
 
     <section id="contato" class="page-section">
       <div class="container contact-grid">
-        <article class="contact-card">
-          <div class="mini-kicker">Contato profissional</div>
-          <h3 class="page-title">Encaminhar um caso</h3>
-          <p>Para manter a triagem organizada, a página direciona o setor jurídico para canais próprios, sem ruído de comunicação com pacientes.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Preencher formulário</a>
-            <a class="btn" href="https://wa.me/5527998134032" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
+        <article class="contact-card contact-form-card">
+          <div class="mini-kicker">Triagem inicial</div>
+          <h3 class="page-title">Encaminhar interesse</h3>
+          <p>Este formulário foi incluído como porta de entrada rápida. Para preservar privacidade e organização, não envie documentos sigilosos nem dados clínicos sensíveis por aqui. O ideal é apenas apresentar a demanda e deixar seu contato.</p>
+          <form class="contact-form" action="https://formsubmit.co/contato@drajoyceradis.com" method="POST">
+            <input type="hidden" name="_subject" value="Novo contato pelo site | Área jurídica | Dra Joyce Radis">
+            <input type="hidden" name="_next" value="https://drajoyceradis.com/obrigada-advogados.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Recebemos seu contato inicial pela área jurídica do site da Dra Joyce Radis. Em breve retornaremos pelo canal informado.">
+            <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
+            <div class="form-grid">
+              <label class="field">
+                <span>Nome</span>
+                <input type="text" name="nome" required>
+              </label>
+              <label class="field">
+                <span>E-mail profissional</span>
+                <input type="email" name="email" required>
+              </label>
+              <label class="field">
+                <span>WhatsApp</span>
+                <input type="text" name="telefone" required>
+              </label>
+              <label class="field">
+                <span>Escritório ou atuação</span>
+                <input type="text" name="escritorio">
+              </label>
+              <label class="field field-full">
+                <span>Resumo objetivo da demanda</span>
+                <textarea name="mensagem" rows="5" required></textarea>
+              </label>
+            </div>
+            <div class="form-note">Use este canal apenas para triagem inicial. Documentos e dados protegidos devem ser compartilhados apenas após alinhamento adequado.</div>
+            <button class="btn btn-primary" type="submit">Enviar contato</button>
+          </form>
         </article>
         <article class="contact-card">
-          <div class="mini-kicker">Identificação</div>
+          <div class="mini-kicker">Contato profissional</div>
           <p><strong>Dra Joyce Radis de Souza</strong><br>CRM ES 21188</p>
           <ul class="simple-list">
             <li>Atuação técnico-documental e pareceres clínicos.</li>
-            <li>Contato inicial via formulário ou WhatsApp.</li>
+            <li>Contato inicial via formulário, Typeform ou WhatsApp.</li>
             <li>Página exclusiva para advogados e escritórios.</li>
           </ul>
+          <div class="cta-row">
+            <a class="btn" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Abrir Typeform</a>
+          </div>
         </article>
       </div>
     </section>

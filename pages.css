@@ -200,6 +200,98 @@ body.home-page .home-note strong {
   margin-top: 24px;
 }
 
+.contact-form {
+  margin-top: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field span {
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--deep);
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(203, 185, 159, .65);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .72);
+  padding: 14px 16px;
+  font: inherit;
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--deep);
+  box-shadow: 0 0 0 3px rgba(74, 61, 54, .08);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 124px;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.hidden-field {
+  display: none;
+}
+
+.form-note {
+  margin: 16px 0 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.thankyou-wrap {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  padding: 48px 0;
+}
+
+.thankyou-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid rgba(203, 185, 159, .45);
+  border-radius: 34px;
+  box-shadow: var(--shadow);
+  padding: 46px;
+}
+
+.thankyou-card h1 {
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  margin-bottom: 18px;
+}
+
+.thankyou-card p {
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 62ch;
+}
+
 .page-footer {
   padding: 8px 0 54px;
 }
@@ -254,7 +346,8 @@ body.home-page .home-note strong {
   .steps-grid,
   .highlights-grid,
   .contact-grid,
-  .page-footer-card {
+  .page-footer-card,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
@@ -264,7 +357,8 @@ body.home-page .home-note strong {
   .page-footer-card,
   .info-card,
   .step-card,
-  .highlight-card {
+  .highlight-card,
+  .thankyou-card {
     padding: 28px;
   }
 
@@ -286,13 +380,15 @@ body.home-page .home-note strong {
   .page-footer-card,
   .info-card,
   .step-card,
-  .highlight-card {
+  .highlight-card,
+  .thankyou-card {
     padding: 24px;
     border-radius: 24px;
   }
 
   .section-title-wrap h2,
-  .page-title {
+  .page-title,
+  .thankyou-card h1 {
     font-size: 36px;
   }
 
