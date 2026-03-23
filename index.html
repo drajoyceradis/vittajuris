@@ -13,112 +13,98 @@
   <link href="fixes.css" rel="stylesheet">
   <link href="pages.css" rel="stylesheet">
 </head>
-<body>
+<body class="home-portal">
   <header class="header">
     <nav class="container nav-inner" aria-label="Navegação Principal">
-      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+      <a class="brand" href="index.html" aria-label="Voltar ao início">
         <span class="monogram">JR</span>
         <span class="brand-copy"><strong>Dra Joyce Radis de Souza</strong><span>Medicina clínica e atuação em assistência pericial</span></span>
       </a>
       <div class="nav-links">
-        <a href="#pacientes">Pacientes</a>
-        <a href="#advogado">Advogados</a>
-        <a href="#sobre">Sobre</a>
+        <a href="pacientes.html">Pacientes</a>
+        <a href="advogados.html">Advogados</a>
+        <a href="#manifesto">Manifesto</a>
         <a href="#contato">Contato</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section id="inicio" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">Médica com atuação clínica e pericial voltada a emissão de pareceres éticos, claros baseados em evidência científica</div>
-          <h1>Descubra um cuidado individualizado</h1>
+    <section id="inicio" class="hero home-hero">
+      <div class="container home-hero-grid">
+        <div class="home-hero-copy">
+          <div class="eyebrow">Medicina clínica e atuação técnico-documental em ambientes distintos, com linguagem própria para cada público</div>
+          <h1>Dois caminhos. A mesma assinatura clínica.</h1>
+          <p class="home-lead">Uma presença institucional desenhada para separar com elegância o atendimento particular ao paciente da atuação técnica voltada ao setor jurídico.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#pacientes">Sou paciente</a>
-            <a class="btn" href="#advogado">Sou advogado</a>
+            <a class="btn btn-primary" href="pacientes.html">Sou paciente</a>
+            <a class="btn" href="advogados.html">Sou advogado(a)</a>
           </div>
+          <div class="hero-microcopy">CRM ES 21188 • Consulta médica particular e análise técnico-documental em páginas próprias</div>
         </div>
-        <div class="hero-visual">
-          <div class="visual-card">
-            <div class="serif">Olhar individualizado</div>
-            <p>Médica assistencial e pericial, voltada a análise Documental e Emissão de Pareceres éticos e claros.</p>
-            <a class="btn" href="#sobre">Conheça minha atuação</a>
-          </div>
+        <div class="home-hero-visual" role="img" aria-label="Retrato da Dra Joyce Radis">
+          <div class="home-visual-chip">Consulta particular com escuta e condução individualizada</div>
+          <div class="home-visual-chip bottom">Área jurídica separada, com apresentação técnica e institucional</div>
         </div>
       </div>
     </section>
 
-    <section id="pacientes" class="section">
+    <section class="section home-portal-section">
       <div class="container">
-        <div class="section-head">
-          <h2>Pacientes</h2>
-          <p>Um atendimento pensado para quem busca um acompanhamento médico com escuta atenta, condução individualizada e rastreio de Fatores de Risco</p>
+        <div class="section-head home-section-head">
+          <h2>Escolha a área correta</h2>
+          <p>A home agora funciona como portal. Ela posiciona, orienta e direciona. O aprofundamento fica nas páginas exclusivas de pacientes e advogados.</p>
         </div>
-        <div class="paths">
-          <article class="path-card">
-            <div class="label">Consulta particular</div>
-            <h3>Consulta Médica</h3>
-            <p>Avaliação de Fatores de Risco, rastreio de doenças e planejamento claro para seguimento.</p>
-            <div class="list">
-              <div>Escuta atenta e abordagem individualizada</div>
-              <div>Clareza na condução e nas orientações</div>
-              <div>Agendamento simples e fácil</div>
-            </div>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta no Calendly">Agende sua consulta</a>
-            </div>
-          </article>
-          <article id="advogado" class="path-card">
-            <div class="label">Atuação assistencial pericial</div>
-            <h3>Atuação em perícia particular</h3>
-            <p>Análise documental completa, com evidências cientificas, linguagem assertiva e estratégica, sempre com embasamento técnica e documental, de forma ética.</p>
-            <div class="list">
-              <div>Leitura criteriosa da documentação médica</div>
-              <div>Organização assistencial documental de casos com emissão de parecer</div>
-              <div>Assistencia técnica durante todo o seu processo</div>
-            </div>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer" aria-label="Solicitar análise no Typeform">Solicitar análise</a>
-              <a class="btn" href="https://wa.me/5527998134032" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Dra. Joyce Radis pelo WhatsApp">WhatsApp</a>
-            </div>
-          </article>
+        <div class="portal-grid">
+          <a class="portal-card" href="pacientes.html">
+            <div class="portal-kicker">Pacientes</div>
+            <h3>Consulta médica particular</h3>
+            <p>Ambiente pensado para quem busca atendimento clínico com clareza, escuta qualificada e comunicação mais humana.</p>
+            <span class="portal-link">Entrar na área do paciente</span>
+          </a>
+          <a class="portal-card" href="advogados.html">
+            <div class="portal-kicker">Advogados</div>
+            <h3>Atuação técnica e documental</h3>
+            <p>Página institucional voltada ao setor jurídico, com apresentação mais sóbria, fluxo mais claro e posicionamento técnico.</p>
+            <span class="portal-link">Entrar na área jurídica</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="section">
-      <div class="container editorial">
-        <div class="editorial-box" role="img" aria-label="Foto da Dra. Joyce Radis"></div>
-        <div class="editorial-copy">
-          <h2>Olhar técnico e individualizado</h2>
-          <p>A medicina, para a Dra Joyce Radis, exige mais do que conduta. Exige atenção real, presença e raciocínio cuidadoso.</p>
-          <p>Na consulta, isso se traduz em escuta, clareza e acompanhamento. Já na atuação jurídica, o resultado é uma análise criteriosa, coerência clínica e ética.</p>
+    <section id="manifesto" class="section home-manifesto">
+      <div class="container">
+        <div class="manifesto-card">
+          <div class="manifesto-mark">JR</div>
+          <div class="manifesto-copy">
+            <div class="mini-kicker">Assinatura profissional</div>
+            <h2>Clareza clínica, linguagem precisa e presença elegante.</h2>
+            <p>O site não precisa dizer tudo na abertura. Ele precisa transmitir direção, autoridade e refinamento. Por isso, a home foi reduzida ao essencial: posicionamento, escolha de área e acesso organizado a cada frente de atuação.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contato" class="section">
-      <div class="container cta-final">
-        <div class="cta-panel">
-          <h2>Entre em contato</h2>
-          <p>Se você é paciente e busca um atendimento humanizado e integrado, estamos te aguardando!</p>
-          <p>Se você é advogado e deseja entender melhor a atuação assistencial documental, entre em contato com a nossa equipe.</p>
+    <section id="contato" class="section home-contact">
+      <div class="container contact-grid">
+        <article class="contact-card">
+          <div class="mini-kicker">Contato para pacientes</div>
+          <h3 class="page-title">Agendamento e primeiro contato</h3>
+          <p>Para consulta médica particular, utilize a área do paciente ou o link de agendamento direto.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">Agende sua Consulta</a>
-            <a class="btn" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Área Jurídica</a>
+            <a class="btn btn-primary" href="pacientes.html">Área do paciente</a>
+            <a class="btn" href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">Agendar</a>
           </div>
-        </div>
-        <div class="cta-panel">
-          <div class="contact-stack">
-            <strong style="color:var(--deep); font-size: 22px; font-weight: 600;">Dra. Joyce Radis de Souza</strong>
-            <span>CRM/ES 21188</span>
-            <span><strong>WhatsApp:</strong> <a href="https://wa.me/5527998134032" target="_blank" rel="noopener noreferrer">(27) 99813-4032</a></span>
-            <span><strong>Agendamento:</strong> <a href="https://calendly.com/drajoyceradis" target="_blank" rel="noopener noreferrer">calendly.com/drajoyceradis</a></span>
-            <span><strong>Solicitação de parecer técnico jurídico:</strong> <a href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Preencha seu Formulário Dr.</a></span>
+        </article>
+        <article class="contact-card">
+          <div class="mini-kicker">Contato para advogados</div>
+          <h3 class="page-title">Triagem técnica e apresentação institucional</h3>
+          <p>Para atuação médico-documental e análise técnica, utilize a área jurídica ou o formulário estruturado.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="advogados.html">Área jurídica</a>
+            <a class="btn" href="https://form.typeform.com/to/R8dRRX26" target="_blank" rel="noopener noreferrer">Abrir formulário</a>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   </main>
@@ -130,10 +116,10 @@
         <div class="footer-copy">
           <strong>Dra. Joyce Radis de Souza</strong>
           <div>CRM ES 21188</div>
-          <p>Medicina assistencial e técnica-pericial, exclusiva para setor jurídico.</p>
+          <p>Medicina clínica e atuação técnico-documental com áreas separadas para pacientes e setor jurídico.</p>
           <div class="caminhos-bifurcacao" style="margin-top: 20px; display:flex; gap:20px; flex-wrap:wrap;">
-            <a href="#pacientes">Área do Paciente</a>
-            <a href="#advogado">Área Jurídica</a>
+            <a href="pacientes.html">Área do Paciente</a>
+            <a href="advogados.html">Área Jurídica</a>
           </div>
           <div class="contato-footer" style="margin-top: 15px;">
             <h3 class="footer-title">Contato</h3>
