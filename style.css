@@ -139,7 +139,7 @@ a:hover {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--color-text-dark);
+    color: var(--deep);
     gap: 16px;
     transition: transform .35s ease;
 }
@@ -150,40 +150,37 @@ a:hover {
 
 .monogram {
     font-family: var(--font-heading);
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 600;
     color: var(--deep);
     text-shadow: 0 10px 25px rgba(67, 53, 47, .10);
 }
 
-.brand-copy {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.9em;
-}
-
 .brand-copy strong {
+    display: block;
+    font-size: 1.1em;
     letter-spacing: .06em;
 }
 
 .brand-copy span {
-    max-width: 42ch;
+    display: block;
+    font-size: 0.8em;
     color: var(--muted);
+    max-width: 42ch;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px; /* Aumentado o espaçamento para uma estética mais clean */
+    gap: 25px; /* Aumentado o espaçamento para mais arejado */
 }
 
 .nav-links a {
-    color: var(--muted);
-    font-weight: 500;
-    font-size: 1em; /* Ajustado para ser mais legível */
     position: relative;
     padding: 8px 0;
     letter-spacing: .04em;
-    transition: color 0.3s ease;
+    color: var(--muted);
+    font-size: 14px; /* Ajustado para um tamanho mais comum */
+    transition: color .35s ease;
 }
 
 .nav-links a::after {
@@ -209,60 +206,59 @@ a:hover {
   transform: scaleX(1);
 }
 
-/* Estilos da nova Hero Section (adaptados para uma estética mais clean) */
+/* Estilos da nova Hero Section (Seção Principal) */
 .hero-section {
     padding: 80px 0;
-    background: var(--color-background-light);
+    background: transparent; /* Já tem o gradiente no body */
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh; /* Garante que a seção ocupe uma boa parte da tela */
 }
 
 .hero-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Padrão para mobile: empilhado */
     align-items: center;
-    gap: 40px; /* Espaçamento entre imagem e texto */
+    justify-content: center;
+    gap: 40px;
 }
 
 .hero-image {
-    width: 280px; /* Tamanho um pouco maior para destaque */
+    width: 280px; /* Tamanho fixo para a imagem em mobile */
     height: 280px;
-    border-radius: 50%; /* Mantém a forma circular */
-    object-fit: cover;
-    box-shadow: var(--shadow-soft); /* Sombra suave para profundidade, sem moldura */
-    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+    border-radius: 50%; /* Transforma a imagem em círculo */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    box-shadow: var(--shadow-soft); /* Sombra suave para dar profundidade */
+    margin-bottom: 30px; /* Espaçamento abaixo da imagem em mobile */
 }
 
 .hero-text {
-    max-width: 800px;
+    max-width: 700px;
     text-align: center;
 }
 
 .hero-text h1 {
-    font-size: clamp(2.5em, 5vw, 3.8em); /* Tamanho responsivo para o título */
+    font-family: var(--font-heading);
+    font-size: 2.8em; /* Tamanho para mobile */
     line-height: 1.2;
-    margin-bottom: 20px;
-    color: var(--deep);
+    margin-bottom: 15px;
+    color: var(--color-primary);
 }
 
 .hero-text p {
-    font-size: clamp(1.1em, 2vw, 1.3em); /* Tamanho responsivo para o parágrafo */
+    font-family: var(--font-body);
+    font-size: 1.2em; /* Tamanho para mobile */
     line-height: 1.6;
-    color: var(--muted);
+    color: var(--color-text-dark);
     margin-bottom: 30px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 20px; /* Espaçamento entre os botões */
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column; /* Empilha botões em mobile */
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* Estilos dos botões (mantidos e adaptados) */
+/* Estilos de botões (mantidos e adaptados) */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -270,64 +266,60 @@ a:hover {
     padding: 14px 28px;
     border-radius: 999px;
     font-family: var(--font-body);
-    font-weight: 600;
     font-size: 1em;
-    letter-spacing: .04em;
-    text-transform: uppercase;
+    font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
+    border: 1px solid transparent;
+    box-shadow: var(--shadow-soft);
 }
 
 .primary-btn {
-  background: linear-gradient(135deg, var(--deep) 0%, var(--deep-2) 100%);
-  border: 1px solid var(--deep);
-  color: var(--white);
-  box-shadow: 0 18px 40px rgba(67, 53, 47, .18);
+    background: var(--deep);
+    color: var(--white);
+    border-color: var(--deep);
 }
 
 .primary-btn:hover {
-  background: linear-gradient(135deg, var(--deep-2) 0%, var(--deep) 100%);
-  box-shadow: 0 24px 50px rgba(67, 53, 47, .25);
+    background: var(--deep-2);
+    border-color: var(--deep-2);
+    color: var(--white);
 }
 
 .secondary-btn {
-  background: var(--surface);
-  border: 1px solid var(--line-strong);
-  color: var(--deep);
-  box-shadow: var(--shadow-soft);
+    background: var(--white);
+    color: var(--deep);
+    border-color: var(--line-strong);
 }
 
 .secondary-btn:hover {
-  background: var(--card-strong);
-  border-color: var(--accent);
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
+    background: var(--accent-2);
+    border-color: var(--accent);
+    color: var(--deep);
 }
 
-/* Estilos para as cards de portal (Pacientes e Advogados) */
+/* Estilos para os cards de Pacientes e Advogados (mantidos e adaptados) */
 .minimal-portal-section {
-  padding-top: 4px;
+  padding-top: 4px; /* Mantido seu valor original */
 }
 
 .refined-portal-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr; /* Padrão para mobile: uma coluna */
   gap: 24px;
+  margin-top: 40px; /* Espaçamento acima das cards */
 }
 
 .refined-portal-card {
   display: block;
   padding: 34px;
-  border-radius: 32px;
+  border-radius: var(--radius-lg); /* Usando sua variável */
   background: linear-gradient(145deg, rgba(255, 255, 255, .82), rgba(248, 240, 232, .68));
   border: 1px solid rgba(184, 162, 143, .30);
   box-shadow: var(--shadow);
   transition: transform .55s cubic-bezier(.22, 1, .36, 1), box-shadow .55s cubic-bezier(.22, 1, .36, 1), border-color .4s ease;
-  color: var(--text); /* Garante que o texto dentro do card use a cor padrão */
+  text-align: center; /* Centraliza o texto nos cards em mobile */
 }
 
 .refined-portal-card:hover {
@@ -336,32 +328,32 @@ a:hover {
   border-color: rgba(154, 127, 103, .42);
 }
 
-.page-kicker { /* Renomeado de .portal-kicker para consistência com o HTML */
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  margin-bottom: 18px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .62);
-  border: 1px solid rgba(184, 162, 143, .28);
-  font-size: 12px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
+.refined-portal-card .page-kicker {
+    font-family: var(--font-body);
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: block;
 }
 
 .refined-portal-card h2 {
-  font-size: 44px;
-  margin-bottom: 12px;
-  color: var(--deep);
+    font-family: var(--font-heading);
+    font-size: 2em;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: var(--deep);
 }
 
 .refined-portal-card p {
-  color: var(--muted);
-  font-size: 16px;
-  max-width: 34ch;
+    font-family: var(--font-body);
+    font-size: 1em;
+    color: var(--text);
+    margin-bottom: 20px;
+    max-width: 45ch;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Estilos do footer (mantidos e adaptados) */
@@ -500,29 +492,54 @@ a:hover {
 
     .hero-buttons {
         justify-content: flex-start; /* Alinha os botões à esquerda */
+        flex-direction: row; /* Botões lado a lado em telas maiores */
     }
 
     .hero-image {
-        margin-right: 40px; /* Espaçamento à direita da imagem */
+        width: 350px; /* Tamanho maior para a imagem em desktop */
+        height: 350px;
+        margin-right: 60px; /* Espaçamento à direita da imagem */
         margin-bottom: 0; /* Remove margem inferior em telas maiores */
     }
 
+    .hero-text h1 {
+        font-size: 3.2em; /* Tamanho maior para desktop */
+    }
+    .hero-text p {
+        font-size: 1.4em; /* Tamanho maior para desktop */
+    }
+
     .refined-portal-grid {
-        grid-template-columns: 1fr 1fr; /* Duas colunas para as cards */
+        grid-template-columns: 1fr 1fr; /* Duas colunas para as cards em desktop */
+        text-align: left; /* Alinha o texto à esquerda nos cards em desktop */
+    }
+
+    .refined-portal-card p {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .page-footer-card {
         flex-direction: row; /* Alinha lado a lado no footer em telas maiores */
         justify-content: space-between;
     }
+
+    .page-footer-grid {
+        flex-wrap: nowrap;
+    }
+
+    .page-footer-mark {
+        font-size: 92px; /* Tamanho original para desktop */
+        text-align: center;
+    }
 }
 
 @media (min-width: 1024px) {
     .hero-text h1 {
-        font-size: 3.2em;
+        font-size: 3.8em; /* Tamanho ainda maior para telas muito grandes */
     }
     .hero-text p {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
 }
 
