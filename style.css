@@ -173,16 +173,17 @@ a:hover {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 25px; /* Aumentado o espaçamento para uma estética mais clean */
 }
 
 .nav-links a {
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 1em; /* Ajustado para ser mais legível */
     position: relative;
     padding: 8px 0;
     letter-spacing: .04em;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color .35s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-links a::after {
@@ -208,137 +209,106 @@ a:hover {
   transform: scaleX(1);
 }
 
-/* Estilos para a nova seção principal (Hero Section) - Refatorada */
+/* Estilos da nova Hero Section (adaptados para uma estética mais clean) */
 .hero-section {
-    background: var(--bg); /* Usando sua cor de fundo base */
-    padding: 80px 0; /* Espaçamento vertical generoso */
+    padding: 80px 0;
+    background: var(--color-background-light);
     text-align: center;
-    position: relative;
-    overflow: hidden; /* Para garantir que a imagem não vaze */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Garante que a seção ocupe uma boa parte da tela */
 }
 
 .hero-content {
     display: flex;
-    flex-direction: column; /* Empilha imagem e texto em telas pequenas */
+    flex-direction: column;
     align-items: center;
     gap: 40px; /* Espaçamento entre imagem e texto */
-    position: relative;
-    z-index: 2; /* Garante que o conteúdo esteja acima de possíveis fundos */
 }
 
 .hero-image {
-    width: 280px; /* Tamanho da imagem */
+    width: 280px; /* Tamanho um pouco maior para destaque */
     height: 280px;
-    border-radius: 50%; /* Torna a imagem circular */
-    object-fit: cover; /* Garante que a imagem preencha o círculo */
-    box-shadow: var(--shadow-soft); /* Sombra suave, sem bordas explícitas */
-    /* Removendo bordas e molduras para uma integração mais limpa */
+    border-radius: 50%; /* Mantém a forma circular */
+    object-fit: cover;
+    box-shadow: var(--shadow-soft); /* Sombra suave para profundidade, sem moldura */
     margin-bottom: 20px; /* Espaçamento abaixo da imagem */
 }
 
 .hero-text {
-    max-width: 700px; /* Largura máxima para o bloco de texto */
+    max-width: 800px;
     text-align: center;
 }
 
 .hero-text h1 {
-    font-family: var(--font-heading);
-    font-size: 3.8em; /* Título maior e mais impactante */
-    font-weight: 600;
+    font-size: clamp(2.5em, 5vw, 3.8em); /* Tamanho responsivo para o título */
+    line-height: 1.2;
+    margin-bottom: 20px;
     color: var(--deep);
-    margin-bottom: 15px;
-    line-height: 1.1;
-    text-shadow: 0 8px 20px rgba(67, 53, 47, .05); /* Sombra de texto sutil */
 }
 
 .hero-text p {
-    font-family: var(--font-body);
-    font-size: 1.3em; /* Parágrafo com bom tamanho para leitura */
+    font-size: clamp(1.1em, 2vw, 1.3em); /* Tamanho responsivo para o parágrafo */
+    line-height: 1.6;
     color: var(--muted);
     margin-bottom: 30px;
-    line-height: 1.5;
 }
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
     gap: 20px; /* Espaçamento entre os botões */
-    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* Estilos dos botões (mantidos e adaptados para a nova hero) */
+/* Estilos dos botões (mantidos e adaptados) */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
+    border-radius: 999px;
     font-family: var(--font-body);
+    font-weight: 600;
     font-size: 1em;
-    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
     text-decoration: none;
-    white-space: nowrap;
     cursor: pointer;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
-    border-radius: 999px;
-    border: 1px solid rgba(184, 162, 143, .42);
-    background: rgba(255, 255, 255, .44);
-    box-shadow: 0 12px 30px rgba(67, 53, 47, .08);
-    isolation: isolate;
-    color: var(--deep); /* Cor do texto padrão para botões */
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(255, 255, 255, .48), rgba(255, 255, 255, 0) 42%);
-  opacity: 0;
-  transition: opacity .35s ease;
-  z-index: -1;
-}
-
-.btn:hover::before {
-  opacity: 1;
+    white-space: nowrap;
 }
 
 .primary-btn {
-    background: linear-gradient(135deg, #463832 0%, #6b564b 100%);
-    border-color: rgba(70, 56, 50, .78);
-    box-shadow: 0 18px 40px rgba(67, 53, 47, .18);
-    color: var(--white); /* Texto branco para o botão primário */
-}
-
-.primary-btn::after {
-  content: '';
-  position: absolute;
-  top: -140%;
-  left: -24%;
-  width: 34%;
-  height: 360%;
-  transform: rotate(22deg) translateX(-180%);
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .44), transparent);
-  transition: transform .85s ease;
-  z-index: -1;
-}
-
-.primary-btn:hover::after {
-  transform: rotate(22deg) translateX(520%);
-}
-
-.btn:hover {
-  background: rgba(255, 255, 255, .74);
-  border-color: rgba(154, 127, 103, .42);
-  color: var(--deep);
+  background: linear-gradient(135deg, var(--deep) 0%, var(--deep-2) 100%);
+  border: 1px solid var(--deep);
+  color: var(--white);
+  box-shadow: 0 18px 40px rgba(67, 53, 47, .18);
 }
 
 .primary-btn:hover {
-  color: var(--white);
-  background: linear-gradient(135deg, #4f4038 0%, #775f52 100%);
+  background: linear-gradient(135deg, var(--deep-2) 0%, var(--deep) 100%);
+  box-shadow: 0 24px 50px rgba(67, 53, 47, .25);
 }
 
-/* Estilos para as cards de portal (mantidos) */
+.secondary-btn {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  color: var(--deep);
+  box-shadow: var(--shadow-soft);
+}
+
+.secondary-btn:hover {
+  background: var(--card-strong);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+/* Estilos para as cards de portal (Pacientes e Advogados) */
 .minimal-portal-section {
   padding-top: 4px;
 }
