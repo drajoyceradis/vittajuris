@@ -237,110 +237,108 @@ a:hover {
 
 .hero-text h1 {
     font-family: var(--font-heading);
-    font-size: 2.8em; /* Tamanho para mobile */
+    font-size: 2.8em;
     line-height: 1.2;
     margin-bottom: 15px;
-    color: var(--color-primary);
+    color: var(--deep);
 }
 
 .hero-text p {
     font-family: var(--font-body);
-    font-size: 1.2em; /* Tamanho para mobile */
+    font-size: 1.2em;
     line-height: 1.6;
-    color: var(--color-text-dark);
+    color: var(--muted);
     margin-bottom: 30px;
 }
 
 .hero-buttons {
     display: flex;
-    flex-direction: column; /* Empilha botões em mobile */
-    gap: 15px;
-    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Estilos de botões (mantidos e adaptados) */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
-    border-radius: 999px;
+    border-radius: 50px;
     font-family: var(--font-body);
+    font-weight: 600;
     font-size: 1em;
-    font-weight: 500;
     text-decoration: none;
-    cursor: pointer;
     transition: var(--transition);
+    cursor: pointer;
     border: 1px solid transparent;
-    box-shadow: var(--shadow-soft);
 }
 
 .primary-btn {
-    background: var(--deep);
+    background-color: var(--deep);
     color: var(--white);
-    border-color: var(--deep);
+    box-shadow: var(--shadow-soft);
 }
 
 .primary-btn:hover {
-    background: var(--deep-2);
-    border-color: var(--deep-2);
-    color: var(--white);
+    background-color: var(--deep-2);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
 }
 
 .secondary-btn {
-    background: var(--white);
+    background-color: transparent;
     color: var(--deep);
-    border-color: var(--line-strong);
+    border-color: var(--deep);
 }
 
 .secondary-btn:hover {
-    background: var(--accent-2);
-    border-color: var(--accent);
-    color: var(--deep);
+    background-color: var(--deep);
+    color: var(--white);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
 }
 
-/* Estilos para os cards de Pacientes e Advogados (mantidos e adaptados) */
+/* Estilos para as cards de portal (Pacientes e Advogados) */
 .minimal-portal-section {
-  padding-top: 4px; /* Mantido seu valor original */
+    padding-top: 4px; /* Mantido do seu original */
 }
 
 .refined-portal-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Padrão para mobile: uma coluna */
-  gap: 24px;
-  margin-top: 40px; /* Espaçamento acima das cards */
+    display: grid;
+    grid-template-columns: 1fr; /* Padrão para mobile: uma coluna */
+    gap: 24px;
+    margin-top: 40px;
 }
 
 .refined-portal-card {
-  display: block;
-  padding: 34px;
-  border-radius: var(--radius-lg); /* Usando sua variável */
-  background: linear-gradient(145deg, rgba(255, 255, 255, .82), rgba(248, 240, 232, .68));
-  border: 1px solid rgba(184, 162, 143, .30);
-  box-shadow: var(--shadow);
-  transition: transform .55s cubic-bezier(.22, 1, .36, 1), box-shadow .55s cubic-bezier(.22, 1, .36, 1), border-color .4s ease;
-  text-align: center; /* Centraliza o texto nos cards em mobile */
+    display: block;
+    padding: 34px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(145deg, rgba(255, 255, 255, .82), rgba(248, 240, 232, .68));
+    border: 1px solid rgba(184, 162, 143, .30);
+    box-shadow: var(--shadow);
+    transition: transform .55s cubic-bezier(.22, 1, .36, 1), box-shadow .55s cubic-bezier(.22, 1, .36, 1), border-color .4s ease;
+    text-align: center; /* Centraliza o texto dos cards em mobile */
 }
 
 .refined-portal-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(154, 127, 103, .42);
+  border-color: rgba(154, 127, 103, .6);
 }
 
 .refined-portal-card .page-kicker {
     font-family: var(--font-body);
-    font-size: 0.9em;
-    letter-spacing: 0.1em;
+    font-size: 0.85em;
+    letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 10px;
-    display: block;
 }
 
 .refined-portal-card h2 {
     font-family: var(--font-heading);
-    font-size: 2em;
+    font-size: 2.2em;
     line-height: 1.2;
     margin-bottom: 15px;
     color: var(--deep);
@@ -349,30 +347,31 @@ a:hover {
 .refined-portal-card p {
     font-family: var(--font-body);
     font-size: 1em;
-    color: var(--text);
+    line-height: 1.6;
+    color: var(--muted);
     margin-bottom: 20px;
-    max-width: 45ch;
+    max-width: 45ch; /* Limita a largura do parágrafo para melhor leitura */
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Estilos do footer (mantidos e adaptados) */
+/* Estilos do rodapé (footer) */
 .footer {
-  background: transparent;
-  padding: 10px 0 54px; /* Ajustado para seu valor original */
+    background: transparent;
 }
 
 .page-footer-card {
-  display: flex; /* Alterado para flex para melhor controle em responsividade */
-  flex-direction: column; /* Empilha em telas pequenas */
-  gap: 30px;
-  align-items: center;
-  padding: 48px; /* Ajustado para seu valor original */
-  border-radius: var(--radius-lg); /* Usando sua variável */
-  background: linear-gradient(155deg, rgba(67, 53, 47, .98), rgba(93, 74, 64, .96));
-  box-shadow: 0 30px 100px rgba(67, 53, 47, .28);
-  position: relative;
-  overflow: hidden;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(155deg, rgba(67, 53, 47, .98), rgba(93, 74, 64, .96));
+    box-shadow: 0 30px 100px rgba(67, 53, 47, .28);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Padrão para mobile: empilhado */
+    align-items: center;
+    text-align: center;
 }
 
 .page-footer-card::before {
@@ -385,6 +384,7 @@ a:hover {
 
 .page-footer-grid {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
@@ -492,21 +492,13 @@ a:hover {
 
     .hero-buttons {
         justify-content: flex-start; /* Alinha os botões à esquerda */
-        flex-direction: row; /* Botões lado a lado em telas maiores */
     }
 
     .hero-image {
-        width: 350px; /* Tamanho maior para a imagem em desktop */
+        width: 350px; /* Tamanho maior para desktop */
         height: 350px;
-        margin-right: 60px; /* Espaçamento à direita da imagem */
+        margin-right: 40px; /* Espaçamento à direita da imagem */
         margin-bottom: 0; /* Remove margem inferior em telas maiores */
-    }
-
-    .hero-text h1 {
-        font-size: 3.2em; /* Tamanho maior para desktop */
-    }
-    .hero-text p {
-        font-size: 1.4em; /* Tamanho maior para desktop */
     }
 
     .refined-portal-grid {
