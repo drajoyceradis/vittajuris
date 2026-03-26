@@ -208,73 +208,85 @@ a:hover {
   transform: scaleX(1);
 }
 
-/* Estilos para a nova seção principal (Hero Section) */
+/* Estilos para a nova seção principal (Hero Section) - Refatorada */
 .hero-section {
-    background-color: transparent; /* Mantém o fundo do body */
-    padding: 64px 20px 80px; /* Ajustado para seu padding original do hero */
-    text-align: center; /* Centraliza o conteúdo */
+    background: var(--bg); /* Usando sua cor de fundo base */
+    padding: 80px 0; /* Espaçamento vertical generoso */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Para garantir que a imagem não vaze */
 }
 
 .hero-content {
-    max-width: 1200px; /* Largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o bloco de conteúdo */
-    display: flex; /* Usa flexbox para alinhar imagem e texto */
-    flex-direction: column; /* Empilha elementos em telas menores */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 40px; /* Espaçamento entre a imagem e o texto */
+    display: flex;
+    flex-direction: column; /* Empilha imagem e texto em telas pequenas */
+    align-items: center;
+    gap: 40px; /* Espaçamento entre imagem e texto */
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo esteja acima de possíveis fundos */
 }
 
 .hero-image {
-    width: 250px; /* Tamanho da sua foto */
-    height: 250px; /* Altura da sua foto */
-    border-radius: 50%; /* Deixa a foto redonda */
+    width: 280px; /* Tamanho da imagem */
+    height: 280px;
+    border-radius: 50%; /* Torna a imagem circular */
     object-fit: cover; /* Garante que a imagem preencha o círculo */
-    border: 4px solid var(--deep); /* Borda ao redor da foto, usando sua cor deep */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: var(--shadow-soft); /* Sombra suave, sem bordas explícitas */
+    /* Removendo bordas e molduras para uma integração mais limpa */
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
 }
 
 .hero-text {
-    max-width: 700px; /* Largura máxima para o texto */
+    max-width: 700px; /* Largura máxima para o bloco de texto */
+    text-align: center;
 }
 
 .hero-text h1 {
-    font-size: 2.8em; /* Tamanho do título principal */
-    color: var(--text); /* Cor do título */
+    font-family: var(--font-heading);
+    font-size: 3.8em; /* Título maior e mais impactante */
+    font-weight: 600;
+    color: var(--deep);
     margin-bottom: 15px;
-    line-height: 1.2;
-    text-wrap: balance;
-    text-shadow: 0 12px 26px rgba(67, 53, 47, .07);
+    line-height: 1.1;
+    text-shadow: 0 8px 20px rgba(67, 53, 47, .05); /* Sombra de texto sutil */
 }
 
 .hero-text p {
-    font-size: 1.3em; /* Tamanho do subtítulo */
-    color: var(--muted); /* Cor do subtítulo */
+    font-family: var(--font-body);
+    font-size: 1.3em; /* Parágrafo com bom tamanho para leitura */
+    color: var(--muted);
     margin-bottom: 30px;
     line-height: 1.5;
-    max-width: 62ch;
 }
 
 .hero-buttons {
     display: flex;
+    justify-content: center;
     gap: 20px; /* Espaçamento entre os botões */
-    justify-content: center; /* Centraliza os botões */
-    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas pequenas */
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
 }
 
+/* Estilos dos botões (mantidos e adaptados para a nova hero) */
 .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
     border-radius: 999px;
-    border: 1px solid var(--line); /* Usando sua cor line */
-    background: var(--surface); /* Usando sua cor surface */
+    border: 1px solid rgba(184, 162, 143, .42);
+    background: rgba(255, 255, 255, .44);
     box-shadow: 0 12px 30px rgba(67, 53, 47, .08);
     isolation: isolate;
-    display: inline-block;
-    padding: 14px 28px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    color: var(--deep); /* Cor do texto padrão para botões */
 }
 
 .btn::before {
@@ -291,17 +303,11 @@ a:hover {
   opacity: 1;
 }
 
-.btn:hover {
-  background: rgba(255, 255, 255, .74);
-  border-color: rgba(154, 127, 103, .42);
-  color: var(--deep);
-}
-
 .primary-btn {
-    background: linear-gradient(135deg, #463832 0%, #6b564b 100%); /* Cores do seu btn-primary */
-    color: var(--white);
-    border: 1px solid rgba(70, 56, 50, .78); /* Cor da borda do seu btn-primary */
+    background: linear-gradient(135deg, #463832 0%, #6b564b 100%);
+    border-color: rgba(70, 56, 50, .78);
     box-shadow: 0 18px 40px rgba(67, 53, 47, .18);
+    color: var(--white); /* Texto branco para o botão primário */
 }
 
 .primary-btn::after {
@@ -317,114 +323,94 @@ a:hover {
   z-index: -1;
 }
 
-.primary-btn:hover {
-    background: linear-gradient(135deg, #4f4038 0%, #775f52 100%); /* Cores do seu btn-primary:hover */
-    border-color: rgba(70, 56, 50, .78); /* Mantém a borda */
-    color: var(--white);
-}
-
 .primary-btn:hover::after {
   transform: rotate(22deg) translateX(520%);
 }
 
-.secondary-btn {
-    background-color: transparent;
-    color: var(--deep); /* Cor do texto do seu btn padrão */
-    border: 1px solid var(--line); /* Borda do seu btn padrão */
+.btn:hover {
+  background: rgba(255, 255, 255, .74);
+  border-color: rgba(154, 127, 103, .42);
+  color: var(--deep);
 }
 
-.secondary-btn:hover {
-    background-color: var(--surface); /* Cor de fundo do seu btn padrão:hover */
-    color: var(--deep); /* Cor do texto do seu btn padrão:hover */
-    border-color: rgba(154, 127, 103, .42); /* Borda do seu btn padrão:hover */
+.primary-btn:hover {
+  color: var(--white);
+  background: linear-gradient(135deg, #4f4038 0%, #775f52 100%);
 }
 
-
-/* Estilos para as cards de portal (mantidos do seu site original) */
+/* Estilos para as cards de portal (mantidos) */
 .minimal-portal-section {
-    background-color: transparent; /* Mantém o fundo do body */
+  padding-top: 4px;
 }
 
 .refined-portal-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .refined-portal-card {
-    background: var(--card); /* Usando sua cor card */
-    padding: 40px;
-    border-radius: var(--radius); /* Usando seu radius */
-    text-align: left;
-    text-decoration: none;
-    color: var(--text); /* Usando sua cor text */
-    transition: transform .55s cubic-bezier(.22, 1, .36, 1), box-shadow .55s cubic-bezier(.22, 1, .36, 1), border-color .4s ease;
-    border: 1px solid var(--line); /* Usando sua cor line */
-    box-shadow: var(--shadow); /* Usando sua shadow */
-    backdrop-filter: blur(16px);
+  display: block;
+  padding: 34px;
+  border-radius: 32px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .82), rgba(248, 240, 232, .68));
+  border: 1px solid rgba(184, 162, 143, .30);
+  box-shadow: var(--shadow);
+  transition: transform .55s cubic-bezier(.22, 1, .36, 1), box-shadow .55s cubic-bezier(.22, 1, .36, 1), border-color .4s ease;
+  color: var(--text); /* Garante que o texto dentro do card use a cor padrão */
 }
 
 .refined-portal-card:hover {
-    transform: translateY(-10px); /* Ajustado para seu hover original */
-    box-shadow: var(--shadow-hover); /* Ajustado para seu hover original */
-    border-color: rgba(154, 127, 103, .42); /* Ajustado para seu hover original */
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(154, 127, 103, .42);
 }
 
-.refined-portal-card::before {
-  content: '';
-  position: absolute;
-  top: -18%;
-  left: -6%;
-  width: 52%;
-  height: 160px;
-  background: radial-gradient(circle, rgba(255, 255, 255, .78) 0%, rgba(255, 255, 255, 0) 72%);
-  pointer-events: none;
-  transition: transform .7s cubic-bezier(.22, 1, .36, 1), opacity .45s ease;
-  opacity: .85;
-}
-
-.refined-portal-card:hover::before {
-  transform: translate3d(22px, 10px, 0);
-}
-
-.page-kicker {
-    font-size: 0.9em;
-    font-weight: 500;
-    color: var(--deep); /* Usando sua cor deep */
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .64);
-    border: 1px solid rgba(184, 162, 143, .28);
-    box-shadow: 0 12px 22px rgba(67, 53, 47, .05);
+.page-kicker { /* Renomeado de .portal-kicker para consistência com o HTML */
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .62);
+  border: 1px solid rgba(184, 162, 143, .28);
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .refined-portal-card h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
+  font-size: 44px;
+  margin-bottom: 12px;
+  color: var(--deep);
 }
 
 .refined-portal-card p {
-    font-size: 1.1em;
-    color: var(--muted); /* Usando sua cor muted */
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 34ch;
 }
 
-/* Estilos do rodapé (footer) */
+/* Estilos do footer (mantidos e adaptados) */
 .footer {
-    background: transparent; /* Mantém o fundo do body */
-    padding: 60px 0;
+  background: transparent;
+  padding: 10px 0 54px; /* Ajustado para seu valor original */
 }
 
 .page-footer-card {
-    background: linear-gradient(155deg, rgba(67, 53, 47, .98), rgba(93, 74, 64, .96)); /* Cores do seu footer-box */
-    box-shadow: 0 30px 100px rgba(67, 53, 47, .28); /* Sombra do seu footer-box */
-    padding: 40px;
-    border-radius: var(--radius); /* Usando seu radius */
-    color: var(--white);
+  display: flex; /* Alterado para flex para melhor controle em responsividade */
+  flex-direction: column; /* Empilha em telas pequenas */
+  gap: 30px;
+  align-items: center;
+  padding: 48px; /* Ajustado para seu valor original */
+  border-radius: var(--radius-lg); /* Usando sua variável */
+  background: linear-gradient(155deg, rgba(67, 53, 47, .98), rgba(93, 74, 64, .96));
+  box-shadow: 0 30px 100px rgba(67, 53, 47, .28);
+  position: relative;
+  overflow: hidden;
 }
 
 .page-footer-card::before {
@@ -454,6 +440,7 @@ a:hover {
     display: block;
     font-size: 1.3em;
     margin-bottom: 5px;
+    color: var(--white); /* Ajustado para melhor contraste no footer escuro */
 }
 
 .page-footer-copy p {
@@ -547,10 +534,16 @@ a:hover {
 
     .hero-image {
         margin-right: 40px; /* Espaçamento à direita da imagem */
+        margin-bottom: 0; /* Remove margem inferior em telas maiores */
     }
 
     .refined-portal-grid {
         grid-template-columns: 1fr 1fr; /* Duas colunas para as cards */
+    }
+
+    .page-footer-card {
+        flex-direction: row; /* Alinha lado a lado no footer em telas maiores */
+        justify-content: space-between;
     }
 }
 
@@ -672,3 +665,6 @@ a:hover {
     transform: none;
   }
 }
+
+/* Estilos de elementos que foram removidos ou substituídos */
+/* .home-page .home-note, .minimal-home-hero, .home-minimal-shell, .home-minimal-copy, .home-main-cta, .home-signature-panel, .signature-line, .signature-divider, .signature-grid, .portal-kicker, .portal-link, .page-hero, .page-hero-grid, .page-hero-copy, .page-hero-visual, .page-hero-panel, .page-hero-grid-2, .page-hero-grid-3, .page-hero-grid-4, .page-hero-grid-5, .page-hero-grid-6, .page-hero-grid-7, .page-hero-grid-8, .page-hero-grid-9, .page-hero-grid-10, .page-hero-grid-11, .page-hero-grid-12, .page-hero-grid-13, .page-hero-grid-14, .page-hero-grid-15, .page-hero-grid-16, .page-hero-grid-17, .page-hero-grid-18, .page-hero-grid-19, .page-hero-grid-20, .page-hero-grid-21, .page-hero-grid-22, .page-hero-grid-23, .page-hero-grid-24, .page-hero-grid-25, .page-hero-grid-26, .page-hero-grid-27, .page-hero-grid-28, .page-hero-grid-29, .page-hero-grid-30, .page-hero-grid-31, .page-hero-grid-32, .page-hero-grid-33, .page-hero-grid-34, .page-hero-grid-35, .page-hero-grid-36, .page-hero-grid-37, .page-hero-grid-38, .page-hero-grid-39, .page-hero-grid-40, .page-hero-grid-41, .page-hero-grid-42, .page-hero-grid-43, .page-hero-grid-44, .page-hero-grid-45, .page-hero-grid-46, .page-hero-grid-47, .page-hero-grid-48, .page-hero-grid-49, .page-hero-grid-50, .page-hero-grid-51, .page-hero-grid-52, .page-hero-grid-53, .page-hero-grid-54, .page-hero-grid-55, .page-hero-grid-56, .page-hero-grid-57, .page-hero-grid-58, .page-hero-grid-59, .page-hero-grid-60, .page-hero-grid-61, .page-hero-grid-62, .page-hero-grid-63, .page-hero-grid-64, .page-hero-grid-65, .page-hero-grid-66, .page-hero-grid-67, .page-hero-grid-68, .page-hero-grid-69, .page-hero-grid-70, .page-hero-grid-71, .page-hero-grid-72, .page-hero-grid-73, .page-hero-grid-74, .page-hero-grid-75, .page-hero-grid-76, .page-hero-grid-77, .page-hero-grid-78, .page-hero-grid-79, .page-hero-grid-80, .page-hero-grid-81, .page-hero-grid-82, .page-hero-grid-83, .page-hero-grid-84, .page-hero-grid-85, .page-hero-grid-86, .page-hero-grid-87, .page-hero-grid-88, .page-hero-grid-89, .page-hero-grid-90, .page-hero-grid-91, .page-hero-grid-92, .page-hero-grid-93, .page-hero-grid-94, .page-hero-grid-95, .page-hero-grid-96, .page-hero-grid-97, .page-hero-grid-98, .page-hero-grid-99, .page-hero-grid-100 */
